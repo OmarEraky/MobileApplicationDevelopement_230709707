@@ -25,10 +25,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         btnGo = findViewById(R.id.btnGo);
         txturl = findViewById(R.id.txtUrl);
         webView = findViewById(R.id.webview);
