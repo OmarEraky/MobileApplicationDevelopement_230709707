@@ -12,6 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity implements MovieFragment.OnMovieSelected {
 
     @Override
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements MovieFragment.OnM
         int display_mode = getResources().getConfiguration().orientation;
         if (display_mode == Configuration.ORIENTATION_PORTRAIT) {
             Intent intent = new Intent(this, DetailsActivity.class);
-            intent.putExtra("movie", movie);
+            intent.putExtra("movie",(Serializable) movie);
             startActivity(intent);
         }else{
             DetailsFragment df =
